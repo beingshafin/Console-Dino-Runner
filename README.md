@@ -12,14 +12,13 @@ A simple **Chrome Dinosaur-inspired console game** written in C for Windows. Jum
 
 ---
 
-<h2>Demo Video 🎬</h2>
-<iframe width="560" height="315" 
-        src="https://www.youtube.com/embed/nDE3G3uUrWc" 
-        title="Dino Runner Demo" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-</iframe>
+## Demo Video 🎬
+
+Watch the game in action!
+
+<a href="https://youtu.be/nDE3G3uUrWc" target="_blank">
+  <img src="https://img.youtube.com/vi/nDE3G3uUrWc/0.jpg" alt="Watch the Demo" />
+</a>
 
 ---
 
