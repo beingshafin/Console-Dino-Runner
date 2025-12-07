@@ -75,9 +75,9 @@ Make sure these `.wav` files are in the same folder as the executable.
 
 2. CD into the
 
-```powershell
-cd Console-Dino-Runner
-```
+   ```powershell
+   cd Console-Dino-Runner
+   ```
 
 3. Compile the game:
 
