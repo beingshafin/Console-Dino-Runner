@@ -12,13 +12,14 @@ A simple **Chrome Dinosaur-inspired console game** written in C for Windows. Jum
 
 ---
 
-## Demo Video 🎬
-
-Watch the game in action!
-
-[![Watch the Demo](https://img.youtube.com/vi/nDE3G3uUrWc/0.jpg)](https://youtu.be/nDE3G3uUrWc)
-
-Click the image above to view the demo on YouTube.
+<h2>Demo Video 🎬</h2>
+<iframe width="560" height="315" 
+        src="https://www.youtube.com/embed/nDE3G3uUrWc" 
+        title="Dino Runner Demo" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+</iframe>
 
 ---
 
@@ -82,13 +83,11 @@ Make sure these `.wav` files are in the same folder as the executable.
    git clone https://github.com/beingshafin/Console-Dino-Runner.git
    ```
 
-````
+2. CD into the
 
-2.  CD into the
-
-   ```powershell
-   cd Console-Dino-Runner
-   ```
+```powershell
+cd Console-Dino-Runner
+```
 
 3. Compile the game:
 
@@ -104,9 +103,9 @@ Make sure these `.wav` files are in the same folder as the executable.
 
 or just run the precompiled game
 
-   ```powershell
+```powershell
 dino.exe
-   ```
+```
 
 ---
 
@@ -115,11 +114,11 @@ dino.exe
 The game uses a **game loop** that updates every frame (based on FPS).
 Key components:
 
-* **Input**: Detects jump key (`SPACE` or `W`).
-* **Physics**: Handles gravity, jumping, and cactus movement.
-* **Collision**: Checks if the dinosaur hits a cactus.
-* **Drawing**: Prints the dinosaur, ground, and cacti using ASCII art.
-* **Sound**: Plays background music and effects using `PlaySound` and `mciSendString`.
+- **Input**: Detects jump key (`SPACE` or `W`).
+- **Physics**: Handles gravity, jumping, and cactus movement.
+- **Collision**: Checks if the dinosaur hits a cactus.
+- **Drawing**: Prints the dinosaur, ground, and cacti using ASCII art.
+- **Sound**: Plays background music and effects using `PlaySound` and `mciSendString`.
 
 All constants like `FPS`, `DINO_X`, `JUMP_VEL`, etc., are defined at the top for easy modification.
 
@@ -127,12 +126,11 @@ All constants like `FPS`, `DINO_X`, `JUMP_VEL`, etc., are defined at the top for
 
 ## Tips for Beginners
 
-* Try changing `FPS` to make the game faster or slower.
-* Modify `JUMP_VEL` or `GRAVITY` to tweak jumping physics.
-* Experiment with the ASCII art to make a custom dinosaur!
-* Add new obstacles or power-ups for extra fun.
+- Try changing `FPS` to make the game faster or slower.
+- Modify `JUMP_VEL` or `GRAVITY` to tweak jumping physics.
+- Experiment with the ASCII art to make a custom dinosaur!
+- Add new obstacles or power-ups for extra fun.
 
 ---
 
 Made with ❤️ by Shafin
-````
