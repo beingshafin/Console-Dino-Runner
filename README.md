@@ -91,11 +91,11 @@ Make sure these `.wav` files are in the same folder as the executable.
    dino-new.exe
    ```
 
-or just run the precompiled game
+   or just run the precompiled game
 
-```powershell
-dino.exe
-```
+   ```powershell
+   dino.exe
+   ```
 
 ## How It Works
 
