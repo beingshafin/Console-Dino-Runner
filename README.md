@@ -4,6 +4,40 @@ A simple **Chrome Dinosaur-inspired console game** written in C for Windows. Jum
 
 ---
 
+## Screenshots
+
+| ![Game Screen](game.png) | ![Lobby Screen](lobby.png) |
+| ------------------------ | -------------------------- |
+| Game Screen              | Lobby Screen               |
+
+---
+
+## Demo Video 🎬
+
+Watch the game in action!
+
+[![Watch the Demo](https://img.youtube.com/vi/nDE3G3uUrWc/0.jpg)](https://youtu.be/nDE3G3uUrWc)
+
+Click the image above to view the demo on YouTube.
+
+---
+
+## Modifying/Editing the Code in IDEs
+
+Depending on the IDE you use, there are small differences when opening and editing the code:
+
+- **VS Code**  
+  When opening the code in VS Code, make sure to open it with **DOS (CP437) encoding**. This ensures all characters display correctly, especially if the code contains special ASCII characters. To do this:
+
+  1. Open the file in VS Code.
+  2. Click the **UTF-8** label in the bottom-right corner of VS Code.
+  3. Select **Reopen with Encoding → DOS (CP437)**.
+
+- **Code::Blocks**  
+  No special encoding is needed. Simply open the project and edit the files normally.
+
+---
+
 ## Features
 
 - Console-based gameplay with colorful ASCII graphics.
@@ -17,8 +51,8 @@ A simple **Chrome Dinosaur-inspired console game** written in C for Windows. Jum
 
 ## How to Play
 
-- **Jump**: Press `SPACE` or `W`  
-- **Start Game**: Press `ENTER`  
+- **Jump**: Press `SPACE` or `W`
+- **Start Game**: Press `ENTER`
 - **Exit Game**: Press `Q`
 
 Avoid hitting the cacti and try to get the highest score possible! 🏆
@@ -29,11 +63,11 @@ Avoid hitting the cacti and try to get the highest score possible! 🏆
 
 - Windows OS (uses Windows-specific headers like `windows.h` and `conio.h`)
 - A C compiler (like GCC or Visual Studio)
-- Sound files:  
-  - `music.wav` (background music)  
-  - `jump.wav` (jump sound)  
-  - `collide.wav` (collision sound)  
-  - `freshgame.wav` (start game sound)  
+- Sound files:
+  - `music.wav` (background music)
+  - `jump.wav` (jump sound)
+  - `collide.wav` (collision sound)
+  - `freshgame.wav` (start game sound)
   - `restart.wav` (restart sound)
 
 Make sure these `.wav` files are in the same folder as the executable.
@@ -44,20 +78,34 @@ Make sure these `.wav` files are in the same folder as the executable.
 
 1. Clone this repository:
 
-   ```bash
-   git clone <your-repo-url>
+   ```powershell
+   git clone https://github.com/beingshafin/Console-Dino-Runner.git
    ```
 
-2. Compile the game:
+````
 
-   ```bash
-   gcc dino_game.c -o dino_game -lwinmm
+2.  CD into the
+
+   ```powershell
+   cd Console-Dino-Runner
    ```
 
-3. Run the game:
+3. Compile the game:
 
-   ```bash
-   ./dino_game
+   ```powershell
+   gcc dino.c -o dino_game -lwinmm
+   ```
+
+4. Run the game:
+
+   ```powershell
+   dino_game
+   ```
+
+or just run the precompiled game
+
+   ```powershell
+dino.exe
    ```
 
 ---
@@ -86,12 +134,5 @@ All constants like `FPS`, `DINO_X`, `JUMP_VEL`, etc., are defined at the top for
 
 ---
 
-## Screenshots
-
-```
-[Insert console screenshots of the dinosaur jumping and game over screen here]
-```
-
----
-
-Made with ❤️ in C by Shafin
+Made with ❤️ by Shafin
+````
