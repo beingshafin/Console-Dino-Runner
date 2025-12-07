@@ -14,11 +14,7 @@ A simple **Chrome Dinosaur-inspired console game** written in C for Windows. Jum
 
 ## Demo Video 🎬
 
-Watch the game in action!
-
-<a href="https://youtu.be/nDE3G3uUrWc" target="_blank">
-  <img src="https://img.youtube.com/vi/nDE3G3uUrWc/0.jpg" alt="Watch the Demo" />
-</a>
+Watch the game in action! [Video](https://youtu.be/nDE3G3uUrWc)
 
 ---
 
