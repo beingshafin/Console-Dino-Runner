@@ -4,9 +4,9 @@ A simple **Chrome Dinosaur-inspired console game** written in C for Windows. Jum
 
 ## Screenshots
 
-| ![Game Screen](game.png) | ![Lobby Screen](lobby.png) |
-| ------------------------ | -------------------------- |
-| Game Screen              | Lobby Screen               |
+| ![Lobby Screen](lobby.png) | ![Game Screen](game.png) |
+| -------------------------- | ------------------------ |
+| Lobby Screen               | Game Screen              |
 
 ## Demo Video 🎬
 
