@@ -2,21 +2,15 @@
 
 A simple **Chrome Dinosaur-inspired console game** written in C for Windows. Jump over cacti, survive as long as you can, and beat your high score!
 
----
-
 ## Screenshots
 
 | ![Game Screen](game.png) | ![Lobby Screen](lobby.png) |
 | ------------------------ | -------------------------- |
 | Game Screen              | Lobby Screen               |
 
----
-
 ## Demo Video 🎬
 
 Watch the game in action! [Video](https://youtu.be/nDE3G3uUrWc)
-
----
 
 ## Modifying/Editing the Code in IDEs
 
@@ -32,8 +26,6 @@ Depending on the IDE you use, there are small differences when opening and editi
 - **Code::Blocks**  
   No special encoding is needed. Simply open the project and edit the files normally.
 
----
-
 ## Features
 
 - Console-based gameplay with colorful ASCII graphics.
@@ -43,8 +35,6 @@ Depending on the IDE you use, there are small differences when opening and editi
 - Background music and sound effects for jumps and collisions.
 - Beginner-friendly code — perfect for learning game loops and console graphics in C.
 
----
-
 ## How to Play
 
 - **Jump**: Press `SPACE` or `W`
@@ -52,8 +42,6 @@ Depending on the IDE you use, there are small differences when opening and editi
 - **Exit Game**: Press `Q`
 
 Avoid hitting the cacti and try to get the highest score possible! 🏆
-
----
 
 ## Requirements
 
@@ -67,8 +55,6 @@ Avoid hitting the cacti and try to get the highest score possible! 🏆
   - `restart.wav` (restart sound)
 
 Make sure these `.wav` files are in the same folder as the executable.
-
----
 
 ## How to Run
 
@@ -102,8 +88,6 @@ or just run the precompiled game
 dino.exe
 ```
 
----
-
 ## How It Works
 
 The game uses a **game loop** that updates every frame (based on FPS).
@@ -117,15 +101,11 @@ Key components:
 
 All constants like `FPS`, `DINO_X`, `JUMP_VEL`, etc., are defined at the top for easy modification.
 
----
-
 ## Tips for Beginners
 
 - Try changing `FPS` to make the game faster or slower.
 - Modify `JUMP_VEL` or `GRAVITY` to tweak jumping physics.
 - Experiment with the ASCII art to make a custom dinosaur!
 - Add new obstacles or power-ups for extra fun.
-
----
 
 Made with ❤️ by Shafin
