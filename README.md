@@ -88,7 +88,7 @@ Make sure these `.wav` files are in the same folder as the executable.
 4. Run the game:
 
    ```powershell
-   dino_game
+   dino-new.exe
    ```
 
 or just run the precompiled game
