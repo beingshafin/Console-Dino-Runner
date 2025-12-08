@@ -82,10 +82,10 @@ Make sure these `.wav` files are in the same folder as the executable.
 3. Compile the game:
 
    ```powershell
-   gcc dino.c -o dino_game -lwinmm
+   gcc dino.c -o dino-new -lwinmm
    ```
 
-4. Run the game:
+4. Run the game you just compiled:
 
    ```powershell
    dino-new.exe
