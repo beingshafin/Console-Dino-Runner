@@ -357,12 +357,12 @@ void update(){
 
     // collision logic
     int DINO_HIT_X_START = DINO_X + 5; // dinos hitbox horizontal
-    int DINO_HIT_X_END = DINO_X + 13;
-    int CACTUS_HIT_X_START = cactusX + 1; // cactus hitbox horizontal
+    int DINO_HIT_X_END = DINO_X + 15;
+    int CACTUS_HIT_X_START = cactusX; // cactus hitbox horizontal
     int CACTUS_HIT_X_END = cactusX + 4;
 
     bool xOverlap = (DINO_HIT_X_END > CACTUS_HIT_X_START ) && (DINO_HIT_X_START<CACTUS_HIT_X_END); // checking both edge cases (first is overlap, second is after cactus goes past through dino)
-    bool yOverlap = (dinoY<6);
+    bool yOverlap = (dinoY<5);
     if (xOverlap && yOverlap){
         mciSendString("close all", NULL, 0, NULL);
         stopBGM();
@@ -389,9 +389,8 @@ int main() {
         while(!gameover) {
             clear();
             input();
-            update();
-
-
+            
+            
             gotoxy(0, 1);
             setColor(C_BRIGHT_BLUE);
             printf("SCORE: %d  |  HIGH SCORE: %d", score, highscore);
@@ -399,9 +398,10 @@ int main() {
             drawCactus(cactusX);
             drawDino(dinoY, legAnimation);
             drawGround();
-
-
+            
+            
             Sleep(gameDelay);
+            update();
             //delay(gameDelay);
         }
 
