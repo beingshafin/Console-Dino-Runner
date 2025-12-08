@@ -68,17 +68,20 @@ void delay(unsigned int mseconds)
 
 // Start background music (loop)
 void startBGM(const char* filename) {
+    char fullpath[MAX_PATH];
     char cmd[512];
 
-    // Close any existing bgm alias
-    mciSendString("stop bgm", NULL, 0, NULL);
-    mciSendString("close bgm", NULL, 0, NULL);
+    GetModuleFileName(NULL, fullpath, MAX_PATH);
 
-    // Open new music file
-    sprintf(cmd, "open \"%s\" type mpegvideo alias bgm", filename);
+    // Remove exe name
+    char* lastSlash = strrchr(fullpath, '\\');
+    if (lastSlash) *(lastSlash + 1) = '\0';
+
+    strcat(fullpath, filename);
+
+    mciSendString("close all", NULL, 0, NULL);
+    sprintf(cmd, "open \"%s\" type mpegvideo alias bgm", fullpath);
     mciSendString(cmd, NULL, 0, NULL);
-
-    // Play in loop
     mciSendString("play bgm repeat", NULL, 0, NULL);
 }
 
@@ -86,6 +89,9 @@ void startBGM(const char* filename) {
 void stopBGM() {
     mciSendString("stop bgm", NULL, 0, NULL);
     mciSendString("close bgm", NULL, 0, NULL);
+
+    //mciSendString("close all", NULL, 0, NULL);
+
 }
 
 // initialization
@@ -249,7 +255,8 @@ void drawCactus(int x) {
 
 // game Screen
 void gameScreen() {
-
+    // Play new game sound
+    PlaySound(TEXT("restart.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_NOSTOP);
     startBGM("music.wav");
 
     //PlaySound(TEXT("music.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_LOOP);
@@ -278,6 +285,9 @@ void gameScreen() {
 
     setColor(C_BRIGHT_GREEN);
     printf("                  [ENTER]     --> Start\n");
+
+    setColor(C_BRIGHT_MAGENTA);
+    printf("                    [S]       --> Vibe\n");
 
     setColor(C_BRIGHT_MAGENTA);
     printf("                    [Q]       --> Exit\n");
@@ -354,8 +364,9 @@ void update(){
     bool xOverlap = (DINO_HIT_X_END > CACTUS_HIT_X_START ) && (DINO_HIT_X_START<CACTUS_HIT_X_END); // checking both edge cases (first is overlap, second is after cactus goes past through dino)
     bool yOverlap = (dinoY<6);
     if (xOverlap && yOverlap){
-        PlaySound(TEXT("collide.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_NOSTOP);
+        mciSendString("close all", NULL, 0, NULL);
         stopBGM();
+        PlaySound(TEXT("collide.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_NOSTOP);
         //PlaySound(NULL, 0, 0); // stop background music
         gameover = true;
     }
@@ -368,7 +379,7 @@ void update(){
 // Main Loop
 int main() {
     showCursor(false);
-    PlaySound(TEXT("freshgame.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_NOSTOP);
+    //PlaySound(TEXT("freshgame.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_NOSTOP);
 
     while(1) {
         init();
@@ -435,9 +446,6 @@ int main() {
                 return 0;
             }
         } while (key != 32 && key != 13);
-        
-        // Play new game sound
-        PlaySound(TEXT("restart.wav"), NULL, SND_FILENAME | SND_ASYNC | SND_NOSTOP);
 
 
         system("cls");
